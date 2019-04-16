@@ -1,0 +1,122 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">  
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <i class="owf owf-{{weather.weather[0].id}} owf-5x" alt="icon"></i>
+          <h1>{{weather.main.temp}}°C</h1>
+          <h5 class="bold">{{weather.name}}</h5>
+          <h6>{{weather.main.temp_max}}° / {{weather.main.temp_min}}°</h6>
+          <h6 class="text-capitalize">{{weather.weather[0].description}}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-body">  
+      <div class="row ">
+        <div class="col-12 col-sm-6">
+          <h6 class="btn btn-light-blue">{{today | date:'EEEE'}} | <strong>TODAY</strong></h6>
+        </div>
+        <div class="col-12 col-sm-6 date-btn">  
+            <h6 class="btn btn-light-blue">{{today | date:'longDate'}} | {{today | date:'shortTime'}}</h6>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-12">
+            <div class="table-responsive text-left ">
+              <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th scope="col">Humity</th>
+                    <th scope="col">Pressure</th>
+                    <th scope="col">Wind Speed</th>
+                    <th scope="col">Visibility</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{{weather.main.humidity}} %</td>
+                    <td>{{weather.main.pressure}} mb</td>
+                    <td>{{weather.wind.speed}} km/h</td>
+                    <td>{{weather.visibility}} km</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+        <div class="col-sm-12">
+          <hr><hr>
+            <div class="col-12 col-sm-6 text-left button-day">
+              <h6 class="btn btn-light-blue"><strong>Forecast</strong></h6>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-borderless text-center">
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="card">
+                        <div class="card-body">
+                            <h6 class="text-primary-blue bold">{{weatherForecast.list[4].dt_txt | date:'EEEE'}}</h6>
+                            <i class="owf owf-{{weatherForecast.list[4].weather[0].id}} owf-3x" alt="icon"></i><br>
+                            {{weatherForecast.list[4].main.temp}}°
+                        </div>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="card">
+                        <div class="card-body">
+                            <h6 class="text-primary-blue bold">{{weatherForecast.list[12].dt_txt | date:'EEEE'}}</h6>
+                            <i class="owf owf-{{weatherForecast.list[12].weather[0].id}} owf-3x" alt="icon"></i><br>
+                            {{weatherForecast.list[12].main.temp}}°
+                        </div>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="card">
+                        <div class="card-body">
+                            <h6 class="text-primary-blue bold">{{weatherForecast.list[20].dt_txt | date:'EEEE'}}</h6>
+                            <i class="owf owf-{{weatherForecast.list[20].weather[0].id}} owf-3x" alt="icon"></i><br>
+                            {{weatherForecast.list[20].main.temp}}°
+                        </div>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="card">
+                        <div class="card-body">
+                            <h6 class="text-primary-blue bold">{{weatherForecast.list[28].dt_txt | date:'EEEE'}}</h6>
+                            <i class="owf owf-{{weatherForecast.list[28].weather[0].id}} owf-3x" alt="icon"></i><br>
+                            {{weatherForecast.list[28].main.temp}}°
+                        </div>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="card">
+                        <div class="card-body">
+                            <h6 class="text-primary-blue bold">{{weatherForecast.list[36].dt_txt | date:'EEEE'}}</h6>
+                            <i class="owf owf-{{weatherForecast.list[36].weather[0].id}} owf-3x" alt="icon"></i><br>
+                            {{weatherForecast.list[36].main.temp}}°
+                        </div>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="card">
+                        <div class="card-body">
+                            <h6 class="text-primary-blue bold">{{weatherForecast.list[39].dt_txt | date:'EEEE'}}</h6>
+                            <i class="owf owf-{{weatherForecast.list[39].weather[0].id}} owf-3x" alt="icon"></i><br>
+                            {{weatherForecast.list[39].main.temp}}°
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+        </div><br>
+      </div>
+    </div>
+  </div><br>
+  <div class="fab ripple" routerLink="/setting"> + </div>
+</div>

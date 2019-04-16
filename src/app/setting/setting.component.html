@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>Enter your city</h4>
+      <hr>
+    </div>
+    <div class="col-sm-8 offset-md-2">
+      <div class="card">
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="city" class="bold">City</label>
+              <input type="text" name="city" class="form-control form-mat-g" id="city" [(ngModel)]="city">
+            </div>
+
+            <div class="form-group">
+              <label for="code" class="bold">Code</label>
+              <input type="text" name="code" class="form-control form-mat-g" id="code" [(ngModel)]="code">
+            </div>
+
+            <button class="btn btn-submit ripple" (click)="save()">Save Changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
